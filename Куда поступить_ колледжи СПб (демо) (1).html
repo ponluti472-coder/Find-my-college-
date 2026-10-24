@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Куда поступить: колледжи СПб (демо)</title>
+<style>
+:root{--bg:#f3f5fb;--card:#fff;--tx:#0f172a;--mu:#64748b;--bd:#e2e8f0;--ac:#4f46e5;--ok:#16a34a;--mid:#d97706;--no:#dc2626;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1020;--card:#161d33;--tx:#f1f5f9;--mu:#94a3b8;--bd:#273049;--ac:#818cf8}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{background:var(--bg);color:var(--tx);display:flex;justify-content:center;min-height:100vh}
+#app{width:100%;max-width:460px;padding:16px 16px 28px}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:14px;min-height:36px}
+.back{background:var(--card);border:1px solid var(--bd);color:var(--tx);width:36px;height:36px;border-radius:12px;font-size:18px;cursor:pointer}
+.dots{display:flex;gap:6px;margin-left:auto}.dots i{width:22px;height:5px;border-radius:3px;background:var(--bd)}.dots i.on{background:var(--ac)}
+.demo{font-size:12px;line-height:1.4;color:var(--mu);background:var(--card);border:1px dashed var(--bd);border-radius:12px;padding:8px 10px;margin-bottom:14px}
+h1{font-size:28px;line-height:1.15;margin-bottom:8px}
+.sub{color:var(--mu);font-size:15px;line-height:1.45;margin-bottom:18px}
+.sb{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:18px}
+.sb label{font-size:13px;color:var(--mu)}
+.sb input{width:100%;font-size:44px;font-weight:800;border:none;background:none;color:var(--tx);outline:none;margin:6px 0}
+.hint{font-size:12px;color:var(--mu);min-height:16px}.err{color:var(--no)}
+.btn{width:100%;margin-top:16px;padding:15px;border:none;border-radius:14px;background:var(--ac);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
+.btn:disabled{opacity:.4;cursor:default}.btn.alt{background:var(--card);color:var(--tx);border:1px solid var(--bd)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pc{border:none;text-align:left;color:#fff;border-radius:20px;padding:14px;cursor:pointer;min-height:176px;display:flex;flex-direction:column;gap:6px;transition:transform .15s}
+.pc:active{transform:scale(.97)}.pc b{font-size:16px}.pc span{font-size:12px;line-height:1.35;opacity:.93;flex:1}
+.pc em{font-style:normal;font-size:12px;background:rgba(0,0,0,.28);padding:4px 8px;border-radius:10px;align-self:flex-start}.pc .e{font-size:30px}
+.bar{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mu);margin-bottom:8px;gap:8px}
+.bar label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.stack{position:relative;height:570px}
+.card{position:absolute;inset:0;background:var(--card);border:1px solid var(--bd);border-radius:24px;overflow:hidden;touch-action:pan-y;user-select:none;transition:transform .22s,opacity .22s,box-shadow .15s;display:flex;flex-direction:column;cursor:grab}
+.card.nx{transform:scale(.95) translateY(12px);opacity:.7;pointer-events:none}
+.card.l{box-shadow:0 0 0 3px var(--ok)}.card.r{box-shadow:0 0 0 3px var(--no)}
+.hd{height:116px;display:flex;align-items:center;justify-content:center;font-size:54px;position:relative;color:#fff}
+.tg{position:absolute;top:12px;font-size:11px;font-weight:700;padding:4px 9px;border-radius:10px;background:rgba(0,0,0,.35)}
+.tg.a{left:12px}.tg.b{right:12px}
+.bd{padding:14px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.bd h3{font-size:19px;line-height:1.2}.bd p{font-size:13px;color:var(--mu)}
+.st{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.st div{background:var(--bg);border-radius:12px;padding:8px 10px}.st small{display:block;font-size:11px;color:var(--mu)}.st b{font-size:16px}
+.ch{font-size:12px;font-weight:700;padding:5px 10px;border-radius:10px;align-self:flex-start;color:#fff}
+.ch.ok{background:var(--ok)}.ch.mid{background:var(--mid)}.ch.no{background:var(--no)}
+.fl{font-size:12px;color:var(--mid)}
+.act{display:flex;gap:10px;margin-top:16px}.act button{flex:1;padding:14px;border:none;border-radius:14px;font-size:20px;cursor:pointer;color:#fff}
+.act .u{background:var(--card);color:var(--tx);border:1px solid var(--bd);flex:.6}.act .n{background:var(--no)}.act .y{background:var(--ok)}
+.link{background:none;border:none;color:var(--ac);font-size:14px;font-weight:600;cursor:pointer;margin-top:14px;width:100%}
+.row{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:12px 14px;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.row div{flex:1;font-size:13px;line-height:1.45;color:var(--mu)}.row b{font-size:15px;color:var(--tx)}
+.x{background:none;border:none;color:var(--mu);font-size:18px;cursor:pointer}
+.empty{text-align:center;color:var(--mu);padding:60px 10px;line-height:1.5}
+.bd .ds{color:var(--tx);font-size:13px;line-height:1.35}
+.sel{width:100%;margin-top:6px;padding:12px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:15px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ac);color:#fff;border:none;border-radius:28px;padding:12px 16px;font-size:15px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.3);cursor:pointer;z-index:5}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:10;display:flex;align-items:flex-end;justify-content:center}
+.sh{background:var(--card);border-radius:24px 24px 0 0;width:100%;max-width:520px;max-height:80vh;overflow:auto;padding:16px}
+.sh h2{font-size:18px;margin-bottom:10px;display:flex;justify-content:space-between}
+.tb{width:100%;border-collapse:collapse;font-size:12px;display:block;overflow-x:auto}
+.tb th{color:var(--mu);font-weight:600;text-align:left;padding:6px 8px;white-space:nowrap}.tb td{padding:8px;border-top:1px solid var(--bd);white-space:nowrap}
+.tb td.b{color:var(--ok);font-weight:700}
+@keyframes up{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes gr{from{width:0}}
+@keyframes pop{from{transform:scale(0)}to{transform:none}}
+.fab{animation:pop .4s both}
+.cc{background:var(--card);border:1px solid var(--bd);border-radius:20px;margin-bottom:14px;overflow:hidden;animation:up .55s cubic-bezier(.2,.8,.2,1) both}
+.ch2{display:flex;gap:12px;align-items:center;padding:14px;color:#fff}.ch2 .em{font-size:30px}.ch2 div{flex:1}.ch2 b{display:block;font-size:15px}.ch2 small{opacity:.85;font-size:12px}.x.w{color:#fff}
+.tgs{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px 0}.tgs span{background:rgba(22,163,74,.15);color:var(--ok);font-size:12px;font-weight:700;padding:4px 9px;border-radius:12px}
+.ms{padding:10px 14px}.mt{margin-bottom:9px}.ml{display:flex;justify-content:space-between;font-size:12px;color:var(--mu);margin-bottom:3px}.ml b{color:var(--tx)}.ml b.bs{color:var(--ok)}
+.bt{height:7px;background:var(--bd);border-radius:4px;overflow:hidden}.bt i{display:block;height:100%;background:var(--ac);border-radius:4px;animation:gr .9s .3s cubic-bezier(.2,.8,.2,1) both}.bt i.bs{background:var(--ok)}
+.mo{width:100%;background:none;border:none;border-top:1px solid var(--bd);padding:12px;color:var(--ac);font-weight:600;font-size:14px;cursor:pointer}.mo span{display:inline-block;transition:transform .3s}.op .mo span{transform:rotate(180deg)}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}.op .more{grid-template-rows:1fr}.mi{overflow:hidden;padding:0 14px;font-size:13px;line-height:1.5;color:var(--mu)}.op .mi{padding-bottom:14px}
+.mi h4{color:var(--tx);font-size:14px;margin:10px 0 3px}.src{font-size:11px;font-style:italic;margin-top:10px}
+.nx2{margin-top:14px}.nx2 .btn{margin-top:8px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin-bottom:12px;padding-bottom:4px}.chip{flex:none;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:20px;padding:8px 12px;font-size:13px;cursor:pointer;transition:all .25s}.chip.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.cols{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px 12px;padding:0 16px 8px;align-items:flex-start}.col{flex:0 0 88%;scroll-snap-align:center}.col:only-child{flex-basis:100%}
+.colh{color:#fff;font-weight:700;padding:11px 14px;border-radius:14px;margin-bottom:10px;display:flex;justify-content:space-between;animation:up .5s both}.colh small{opacity:.85}
+.chips.st{position:sticky;top:0;z-index:4;background:var(--bg);padding:8px 0;margin-bottom:8px;scrollbar-width:none}.chips::-webkit-scrollbar,.cols::-webkit-scrollbar{display:none}
+.cols{position:relative;scrollbar-width:none}
+.chips.st{position:static;padding:0 0 4px}
+@keyframes vanish{40%{opacity:.8;transform:scale(.6)}to{opacity:0;transform:scale(.05);height:0;margin-bottom:0;border-radius:50%}}
+.cc.out{animation:vanish .38s cubic-bezier(.6,0,.4,1) forwards;overflow:hidden;pointer-events:none}
+.na .cc,.na .colh,.na .bt i,.na .fab{animation:none}
+.nav{display:flex;align-items:center;gap:8px;margin-bottom:10px}.nav .chips{flex:1;min-width:0;margin:0}.ar{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--tx);font-size:24px;line-height:1;cursor:pointer;transition:transform .15s,background .2s}.ar:hover{background:var(--ac);color:#fff}.ar:active{transform:scale(.88)}
+.cc.out{will-change:transform,height}
+.chips.st{position:relative}
+.pi{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:16px;margin-top:14px;animation:up .45s both}.pi h3{font-size:18px;margin-bottom:4px}.pi h4{font-size:13px;color:var(--ac);margin:10px 0 2px}.pi p{font-size:14px;line-height:1.5;color:var(--tx)}.pi .btn{margin-top:14px}
+</style></head><body><div id="app"></div>
+<script>
+// ===== ДЕМО-ДАННЫЕ: названия и цифры придуманы. Замените реальными. =====
+const C=[['Невский колледж цифровых технологий','Горьковская',0.5,3.5,4.6,'Лаборатории, партнёры из IT, практика со 2 курса.'],['Колледж информационных систем и связи','Московская',1,-7,4.3,'Сильная база по сетям и разработке, многие идут в вузы.'],['Петроградский медицинский колледж','Петроградская',-0.5,4,4.7,'Практика в городских больницах, высокое трудоустройство.'],['Колледж сервиса и гостеприимства','Академическая',4,9,4.2,'Учебные кухни и отель-тренажёр, стажировки в ресторанах.'],['Колледж дизайна и креативных индустрий','Василеостровская',-3,1.5,4.5,'Студии графики и интерьера, выставки студенческих работ.'],['Политехнический колледж энергетики','Площадь Мужества',3,10,4.1,'Мастерские и полигон электромонтажа, договоры с энергокомпаниями.'],['Колледж экономики и права','Сенная площадь',-0.5,-0.5,4,'Практика в бухгалтериях и банках, подготовка по 1С.'],['Автотранспортный колледж','Автово',-5,-8,4.2,'Автомастерские и диагностика, дуальное обучение.'],['Частный колледж «Вектор»','Невский проспект',1,0.5,3.9,'Небольшие группы, гибкий график, помощь с работой.'],['Частный колледж «Акцент»','Лесная',1.5,5.5,3.8,'Вечерние группы и много практики, гибкие сроки.'],['Колледж инфокоммуникаций','Купчино',3,-12,4.2,'Лаборатории сетей и серверов, олимпиады по программированию.'],['Академический колледж IT','Парнас',2,13,4.4,'Проекты с реальными заказчиками, мобильная разработка.'],['Колледж медицины и ухода','Улица Дыбенко',9,-3,4.1,'Симуляционный центр, практика в поликлиниках района.'],['Фармацевтический колледж','Чёрная речка',-1,6.5,4.4,'Лаборатории, стажировки в аптечных сетях.'],['Колледж искусств и моды','Гостиный двор',0,1,4.3,'Мастерские графики и одежды, конкурсы и показы.'],['Школа дизайна «Полотно»','Чернышевская',2,2,3.9,'Современные программы, наставники-практики (частный).'],['Колледж пищевых технологий','Лиговский проспект',1.5,-1,4.2,'Кондитерское производство, практика на заводах.'],['Колледж торговли и ресторанного дела','Спортивная',-1.5,3,4,'Профессиональные кухни, участие в кулинарных чемпионатах.'],['Электротехнический колледж','Ладожская',9,1.5,4.3,'Энергетический полигон, практика в сетевых компаниях.'],['Колледж промышленной автоматики','Выборгская',1,6,4.1,'Станки с ЧПУ, робототехника, WorldSkills.'],['Финансово-экономический колледж','Владимирская',1.5,-1.5,4.3,'Банки, налоги и 1С, практика в бизнес-центрах.'],['Колледж предпринимательства','Приморская',-6,6,3.9,'Бизнес-симуляторы, стажировки в малом бизнесе.'],['Технический колледж автомобилей','Ломоносовская',6,-8,4,'Диагностика и кузовной ремонт, партнёры: автосалоны.'],['Колледж транспорта и логистики','Проспект Ветеранов',-7,-10,4.3,'Сервис грузового транспорта, дуальное обучение.'],['Колледж туризма и сервиса «Балтика»','Адмиралтейская',-1.5,-1.5,4.4,'Языки, практика в отелях и турагентствах.'],['Гостиничный колледж','Парк Победы',1,-5.5,4.1,'Учебный отель, обслуживание мероприятий.']];
+const H={'Петергоф':[-22,-14],'Купчино':[3,-12],'Парнас':[2,14],'Девяткино':[14,12],'Центр':[0,0]};
+const tmin=c=>{const h=H[S.home];return Math.round(12+Math.hypot(c[2]-h[0],c[3]-h[1])*2.2)};
+const C0=[['Невский колледж цифровых технологий','м. Горьковская'],['Колледж информационных систем и связи','м. Московская'],['Петроградский медицинский колледж','м. Петроградская'],['Колледж сервиса и гостеприимства','м. Академическая'],['Колледж дизайна и креативных индустрий','м. Василеостровская'],['Политехнический колледж энергетики','м. Площадь Мужества'],['Колледж экономики и права','м. Сенная площадь'],['Автотранспортный колледж','м. Автово'],['Частный колледж «Вектор»','м. Невский проспект'],['Частный колледж «Акцент»','м. Лесная']];
+const P=[
+{n:'Программист',e:'💻',g:'#6366f1,#0ea5e9',s:'Информационные системы и программирование',d:'Пишет программы, сайты и приложения. Много логики и работы за компьютером.'},
+{n:'Медсестра / медбрат',e:'🩺',g:'#10b981,#0f766e',s:'Сестринское дело',d:'Помогает врачам и ухаживает за пациентами. Ответственность и работа с людьми.'},
+{n:'Дизайнер',e:'🎨',g:'#ec4899,#7c3aed',s:'Дизайн (по отраслям)',d:'Делает визуал: графику, интерфейсы, интерьеры. Нужны вкус и портфолио.'},
+{n:'Повар-кондитер',e:'🍰',g:'#f59e0b,#dc2626',s:'Поварское и кондитерское дело',d:'Готовит блюда и выпечку в ресторанах и кондитерских. Много практики.'},
+{n:'Электрик',e:'⚡',g:'#eab308,#ea580c',s:'Монтаж и эксплуатация электрооборудования',d:'Монтирует и чинит электросети и оборудование. Востребован везде.'},
+{n:'Бухгалтер',e:'📊',g:'#0ea5e9,#1d4ed8',s:'Экономика и бухгалтерский учёт',d:'Ведёт учёт денег и документов компании. Точность и аккуратность.'},
+{n:'Автомеханик',e:'🚗',g:'#64748b,#0f172a',s:'Техническое обслуживание и ремонт автотранспорта',d:'Диагностирует и ремонтирует машины. Работа руками и с техникой.'},
+{n:'Туризм и отели',e:'🧳',g:'#14b8a6,#2563eb',s:'Туризм и гостеприимство',d:'Организует поездки, работает в отелях и сервисе. Общение и языки.'}];
+// [профессия, колледж, балл прошлого года, бюджет(1/0), цена в год, пометка]
+const M='🩺 Нужна медсправка',D='🎨 Вступительное испытание: рисунок';
+const O=[[0,0,4.62,1,0],[0,1,4.48,1,0],[0,10,4.3,1,0],[0,11,4.55,1,0],[0,8,3.6,0,185000],[0,9,3.5,0,165000],[0,11,3.8,0,170000],[1,2,4.71,1,0,M],[1,12,4.35,1,0,M],[1,13,4.5,1,0,M],[1,2,3.9,0,135000,M],[1,9,3.5,0,120000,M],[2,4,4.35,1,0,D],[2,14,4.2,1,0,D],[2,15,3.5,0,210000,D],[2,4,3.8,0,175000,D],[2,8,3.5,0,190000,D],[3,3,4.1,1,0],[3,16,3.9,1,0],[3,17,4.0,1,0],[3,3,3.6,0,125000],[3,9,3.5,0,150000],[4,5,4.2,1,0],[4,18,4.1,1,0],[4,19,4.3,1,0],[4,1,3.7,0,110000],[4,8,3.5,0,125000],[5,6,4.55,1,0],[5,20,4.4,1,0],[5,21,3.9,1,0],[5,6,3.8,0,128000],[5,8,3.5,0,140000],[6,7,4.0,1,0],[6,22,4.0,1,0],[6,23,4.2,1,0],[6,9,3.5,0,118000],[6,23,3.6,0,105000],[7,3,4.3,1,0],[7,24,4.4,1,0],[7,25,4.1,1,0],[7,6,4.2,1,0],[7,8,3.5,0,155000]];
+const O0=[[0,0,4.62,1,0,''],[0,1,4.48,1,0,''],[0,8,3.6,0,185000,''],[0,9,3.5,0,165000,''],
+[1,2,4.71,1,0,'🩺 Нужна медицинская справка'],[1,2,3.9,0,135000,'🩺 Нужна медицинская справка'],[1,9,3.5,0,120000,'🩺 Нужна медицинская справка'],
+[2,4,4.35,1,0,'🎨 Вступительное испытание: рисунок'],[2,4,3.8,0,175000,'🎨 Вступительное испытание: рисунок'],[2,8,3.5,0,210000,'🎨 Нужно портфолио'],
+[3,3,4.1,1,0,''],[3,3,3.6,0,125000,''],[3,9,3.5,0,150000,''],
+[4,5,4.2,1,0,''],[4,7,4.0,1,0,''],[4,1,3.7,0,110000,''],
+[5,6,4.55,1,0,''],[5,6,3.8,0,128000,''],[5,8,3.5,0,140000,''],
+[6,7,4.0,1,0,''],[6,5,4.15,1,0,''],[6,9,3.5,0,118000,''],
+[7,3,4.3,1,0,''],[7,6,4.2,1,0,''],[7,8,3.5,0,155000,'']];
+// =========================================================================
+let S;function reset(){S={v:'score',score:null,p:null,all:false,sw:[],fav:[],home:S?S.home:'Петергоф',sheet:false}}reset();
+const $=document.getElementById('app'),f=n=>n.toFixed(2).replace('.',',');
+const reach=(o)=>S.score>=o[2];
+function queue(){return O.map((o,i)=>[o,i]).filter(([o,i])=>o[0]===S.p&&!S.sw.some(s=>s.i===i)&&!S.fav.includes(i)&&(S.all||reach(o))).sort((a,b)=>{const ra=reach(a[0]),rb=reach(b[0]);if(ra!==rb)return ra?-1:1;if(ra)return b[0][3]-a[0][3]||b[0][2]-a[0][2];return a[0][2]-b[0][2]})}
+const PI=[['Пишет программы, сайты и приложения, исправляет ошибки и придумывает, как всё это будет работать. Работает за компьютером, часто в команде, может удалённо.','Подойдёт, если вам интересно разбираться в технике, нравится логика и не страшно долго сидеть за ПК.','Колледж даёт базу, дальше многое — самообучение и свои проекты.'],['Помогает врачу, ухаживает за больными, делает уколы и перевязки, следит за состоянием пациентов.','Подойдёт, если вас вдохновляет помогать людям и вы спокойны в стрессовых ситуациях. Работа всегда нужна.','Сменный график, большая ответственность, нужна медсправка при поступлении.'],['Рисует интерфейсы, логотипы, постеры и интерьеры: превращает идею заказчика в красивую и понятную картинку.','Подойдёт, если вы замечаете детали, есть вкус и хочется делать вещи, которые видит много людей.','Часто нужны портфолио и вступительное испытание по рисунку.'],['Готовит блюда и выпечку, следит за качеством продуктов и чистотой на кухне, работает в ресторанах, кафе, на производстве.','Подойдёт, если нравится создавать что-то руками и видеть результат сразу.','Работа на ногах, жара и темп, график часто сменный.'],['Монтирует и чинит проводку, щитки, освещение и оборудование, находит неисправности.','Подойдёт, если вы аккуратны, любите разбираться, как устроены устройства, и цените понятный результат.','Важны техника безопасности и внимательность: ошибка может быть опасной.'],['Ведёт учёт денег компании, счета, налоги и отчёты, часто в программе 1С.','Подойдёт, если вы усидчивы, любите порядок и цифры, боитесь сложных таблиц меньше, чем хаоса.','Нужно следить за изменениями в налогах и законах, очень важна точность.'],['Диагностирует и ремонтирует машины: двигатель, подвеску, электрику, тормоза.','Подойдёт, если вам нравится техника и вы хотите работать руками и головой одновременно.','Работа физическая, масло и грязь — часть профессии; зато навык всегда нужен.'],['Организует поездки, бронирует отели, встречает гостей, консультирует и решает их проблемы.','Подойдёт, если вам легко даётся общение, интересны языки и путешествия.','Много общения с людьми, иногда стресс и неровный график; английский очень пригодится.']];
+function info(){if(S.pv===undefined)return '';const p=P[S.pv],t=PI[S.pv],n=O.filter((o,k)=>o[0]===S.pv&&reach(o)&&!S.fav.includes(k)).length;return `<div id="pinfo" class="pi"><h3>${p.e} ${p.n}</h3><h4>Что делает</h4><p>${t[0]}</p><h4>Почему может подойти</h4><p>${t[1]}</p><h4>Что важно знать</h4><p>${t[2]}</p><button class="btn" onclick="pick(${S.pv})">Смотреть колледжи${n?' · '+n:''}</button></div>`}
+function selP(i){S.pv=i;render();const e=document.getElementById('pinfo');if(e)e.scrollIntoView({behavior:'smooth',block:'nearest'})}
+function setTab(p){S.tab=p;render()}
+function hdr(back){const st={score:1,prof:2,cards:3,fav:3}[S.v];return `<div class="top">${back?`<button class="back" onclick="go('${back}')" aria-label="Назад">←</button>`:''}<div class="dots">${[1,2,3].map(i=>`<i class="${i<=st?'on':''}"></i>`).join('')}</div></div>`}
+const demo='<div class="demo">Демо-версия: названия колледжей и цифры придуманы для показа. Не используйте для реального выбора. Баллы указаны за прошлый год и меняются.</div>';
+function go(v){S.v=v;render();scrollTo(0,0)}
+function parse(s){const n=parseFloat(String(s).replace(',','.'));return isNaN(n)?null:n}
+function chk(v){const n=parse(v),ok=n!==null&&n>=3&&n<=5;S.score=ok?Math.round(n*100)/100:null;document.getElementById('go').disabled=!ok;document.getElementById('hint').className='hint'+(v&&!ok?' err':'');document.getElementById('hint').textContent=v&&!ok?'Введите число от 3,00 до 5,00':'Как в аттестате, например 4,37'}
+function pick(p){S.p=p;S.sw=[];go('cards')}
+function fly(l){const c=document.querySelector('.card:not(.nx)');if(!c)return;c.style.transform=`translateX(${l?520:-520}px) rotate(${l?20:-20}deg)`;c.style.opacity=0;setTimeout(()=>act(l),200)}
+function act(l){const q=queue();if(!q.length)return;const i=q[0][1];S.sw.push({i,l});if(l&&!S.fav.includes(i))S.fav.push(i);render()}
+function undo(){const s=S.sw.pop();if(!s)return;if(s.l)S.fav=S.fav.filter(x=>x!==s.i);render()}
+function del(i){S.fav=S.fav.filter(x=>x!==i);render()}
+function card(o,i,nx){const p=P[o[0]],c=C[o[1]],d=S.score-o[2],cl=d>=.15?['ok','Высокие шансы']:d>=0?['mid','Шансы средние']:['no','Не хватает '+f(-d)];
+return `<div class="card${nx?' nx':''}" data-i="${i}"><div class="hd" style="background:linear-gradient(135deg,${p.g})">${p.e}<span class="tg a">${o[3]?'БЮДЖЕТ':'ПЛАТНОЕ'}</span><span class="tg b">ДЕМО</span></div><div class="bd"><h3>${c[0]}</h3><p>${p.s}</p><p>🚇 м. ${c[1]}</p><p class="ds">${c[5]}</p><div class="st"><div><small>${o[3]?'Проходной балл*':'Мин. балл*'}</small><b>${f(o[2])}</b></div><div><small>Цена в год</small><b>${o[3]?'бесплатно':o[4].toLocaleString('ru-RU')+' ₽'}</b></div><div><small>Качество образования</small><b>⭐ ${f(c[4])}</b></div><div><small>В пути от: ${S.home}</small><b>~${tmin(c)} мин</b></div></div><span class="ch ${cl[0]}">${cl[1]}</span>${o[5]?`<div class="fl">${o[5]}</div>`:''}<p style="font-size:11px">* прошлый год</p></div></div>`}
+function bind(el){let sx=0,dx=0,dr=false;
+el.addEventListener('pointerdown',e=>{dr=true;sx=e.clientX;el.setPointerCapture(e.pointerId);el.style.transition='none'});
+el.addEventListener('pointermove',e=>{if(!dr)return;dx=e.clientX-sx;el.style.transform=`translateX(${dx}px) rotate(${dx*.05}deg)`;el.classList.toggle('l',dx>40);el.classList.toggle('r',dx<-40)});
+el.addEventListener('pointerup',()=>{if(!dr)return;dr=false;el.style.transition='';if(Math.abs(dx)>110)fly(dx>0);else{el.style.transform='';el.classList.remove('l','r')}dx=0})}
+function render(){let h='';
+if(S.v==='score'){h=hdr()+`<h1>Куда поступить после 9 класса?</h1><p class="sub">Введите средний балл аттестата и выберите профессию. Покажем колледжи Петербурга, куда вы проходите.</p><div class="sb"><label for="sc">Ваш средний балл</label><input id="sc" inputmode="decimal" placeholder="4,37" autocomplete="off" value="${S.score!==null?f(S.score):''}" oninput="chk(this.value)" onkeydown="if(event.key==='Enter'&&S.score!==null)go('prof')"><div id="hint" class="hint">Как в аттестате, например 4,37</div><label for="hm" style="display:block;margin-top:14px;font-size:13px;color:var(--mu)">Где вы живёте</label><select id="hm" class="sel" onchange="S.home=this.value">${Object.keys(H).map(k=>`<option${k===S.home?' selected':''}>${k}</option>`).join('')}</select></div><button id="go" class="btn" ${S.score===null?'disabled':''} onclick="go('prof')">Выбрать профессию</button><div style="height:14px"></div>`+demo}
+else if(S.v==='prof'){h=hdr('score')+`<h1>Кем хотите стать?</h1><p class="sub">Ваш балл: <b>${f(S.score)}</b>. Выберите профессию, чтобы увидеть колледжи.</p><div class="grid">${P.map((p,i)=>{const n=O.filter((o,k)=>o[0]===i&&reach(o)&&!S.fav.includes(k)).length;return `<button class="pc" style="background:linear-gradient(135deg,${p.g})" onclick="selP(${i})"><div class="e">${p.e}</div><b>${p.n}</b><span>${p.d}</span><em>${n?'Подходит: '+n:O.some(o=>o[0]===i&&reach(o))?'✓ Всё добавлено':'Выше вашего балла'}</em></button>`}).join('')}</div>`+info()+(S.fav.length?`<button class="link" onclick="go('fav')">⚖️ Сравнить (${S.fav.length})</button>`:'')+'<div style="height:12px"></div>'+demo}
+else if(S.v==='cards'){const q=queue(),p=P[S.p];h=hdr('prof')+`<div class="bar"><b style="color:var(--tx);font-size:16px">${p.e} ${p.n}</b><label><input type="checkbox" ${S.all?'checked':''} onchange="S.all=this.checked;render()"> и выше моего балла</label></div><div class="stack">${q.length?(q[1]?card(q[1][0],q[1][1],1):'')+card(q[0][0],q[0][1],0):`<div class="empty">🎉 Вы просмотрели всё, что подходит: понравившиеся уже в сравнении.<br>Включите «и выше моего балла» или выберите другую профессию.</div>`}</div><div class="act"><button class="u" onclick="undo()" aria-label="Вернуть">↩</button><button class="n" onclick="fly(false)" aria-label="Нет">✕</button><button class="y" onclick="fly(true)" aria-label="Да">♥</button></div>${S.fav.length?`<div class="nx2"><button class="btn" onclick="go('fav')">⚖️ Сравнить выбранные (${S.fav.length})</button><button class="btn alt" onclick="go('prof')">← К другим профессиям</button></div>`:''}<p class="sub" style="font-size:12px;margin:8px 0 0;text-align:center">Свайп вправо: нравится. Влево: пропустить.</p>`}
+else{h=favView();if(0)h=hdr('prof')+`<h1>Мои варианты</h1><p class="sub">Сравните колледжи рядом друг с другом.</p>`+(S.fav.length?S.fav.map(i=>{const o=O[i],c=C[o[1]];return `<div class="row"><div><b>${c[0]}</b><br>${P[o[0]].s}<br>${o[3]?'Бюджет':'Платное: '+o[4].toLocaleString('ru-RU')+' ₽/год'} · балл ${f(o[2])}* · ${c[1]}</div><button class="x" onclick="del(${i})" aria-label="Убрать">✕</button></div>`}).join(''):'<div class="empty">Пока пусто. Нажимайте ♥ на карточках.</div>')+`<button class="btn alt" onclick="go('prof')">Другая профессия</button><button class="btn alt" onclick="reset();render()">Начать заново</button><div style="height:14px"></div>`+demo}
+function favView(){const R=S.fav.map(i=>{const o=O[i],c=C[o[1]];return{i,o,c,p:P[o[0]],pr:o[3]?0:o[4],sc:o[2],tm:tmin(c),q:c[4]}});
+let h=hdr('prof')+`<h1>⚖️ Сравнение</h1><p class="sub">Выбрано: ${R.length}. Нажмите «Подробнее» у колледжа, чтобы прочитать о нём больше.</p>`;
+if(!R.length)return h+`<div class="empty">Пока пусто. Нажимайте ♥ на карточках.</div><button class="btn" onclick="go('prof')">Выбрать профессию</button>`;
+let G=R,many=R.length>1;const mn=k=>Math.min(...G.map(r=>r[k])),mx=k=>Math.max(...G.map(r=>r[k]));
+const bar=(l,v,b,pc)=>`<div class="mt"><div class="ml"><span>${l}</span><b class="${b?'bs':''}">${v}</b></div><div class="bt"><i class="${b?'bs':''}" style="width:${Math.max(6,pc)}%"></i></div></div>`;
+const cardOf=(r,k)=>{const bp=r.pr===mn('pr'),bs=r.sc===mn('sc'),bt=r.tm===mn('tm'),bq=r.q===mx('q');
+const tg=[[bp,r.pr?'Лучшая цена':'Бесплатно','💸'],[bt,'Ближе всего к дому','📍'],[bq,'Лучшая оценка','⭐'],[bs,'Проще по баллу','🎯']].filter(a=>a[0]&&many);
+const why=tg.length?'Среди ваших вариантов у этого колледжа: '+tg.map(a=>a[1].toLowerCase()).join(', ')+'.':many?'Сбалансированный вариант: нет явных рекордов, но и слабых мест тоже.':'Пока это единственный выбранный колледж, добавьте ещё, чтобы сравнить.';
+const txt=`<h4>О колледже</h4><p>${r.c[0]}. ${r.c[5]} Расположен у метро «${r.c[1]}», дорога от района «${S.home}» занимает около ${r.tm} минут.</p><h4>Программа «${r.p.n}»</h4><p>Обучение ${r.o[3]?'бюджетное: места распределяются по среднему баллу аттестата, в прошлом году проходной балл был '+f(r.sc)+'.':'платное: '+r.o[4].toLocaleString('ru-RU')+' ₽ в год, минимальный балл для зачисления '+f(r.sc)+'.'} Учебный план сочетает теорию и практику: с первого года студенты работают в мастерских и лабораториях, на старших курсах проходят стажировку у партнёров колледжа. Выпускникам помогают с трудоустройством и поступлением в вузы.</p><h4>Чем отличается</h4><p>${why} Оценка качества образования: ${f(r.q)} из 5.</p><h4>Документы и сроки</h4><p>Аттестат, паспорт, фотографии 3×4 и заявление.${r.o[5]?' '+r.o[5]+'.':''} Приём документов обычно идёт с июня по август.</p><p class="src">📄 Образец текста «с официального сайта» college${r.o[1]+1}.example.ru. Всё придумано для демо.</p>`;
+return `<div class="cc" style="animation-delay:${k*110}ms"><div class="ch2" style="background:linear-gradient(135deg,${r.p.g})"><span class="em">${r.p.e}</span><div><b>${r.c[0]}</b><small>${r.p.n} · м. ${r.c[1]}</small></div><button class="x w" onclick="delCard(${r.i},this)" aria-label="Убрать">✕</button></div><div class="tgs">${tg.map(a=>`<span>${a[2]} ${a[1]}</span>`).join('')}</div><div class="ms">${bar('Цена в год',r.o[3]?'бесплатно':r.pr.toLocaleString('ru-RU')+' ₽',bp&&many,r.pr/(mx('pr')||1)*100)}${bar('Проходной балл*',f(r.sc),bs&&many,(r.sc-3)/2*100)}${bar('В пути от «'+S.home+'»',r.tm+' мин',bt&&many,r.tm/mx('tm')*100)}${bar('Качество образования','⭐ '+f(r.q),bq&&many,r.q/5*100)}</div><button class="mo" onclick="this.closest('.cc').classList.toggle('op')">Подробнее <span>⌄</span></button><div class="more"><div class="mi">${txt}</div></div></div>`};
+const ps=[...new Set(R.map(r=>r.o[0]))],tab=ps.includes(S.tab)?S.tab:ps[0];
+const grp=p=>{G=R.filter(r=>r.o[0]===p);many=G.length>1;return G.map(cardOf).join('')};
+h+=`<div class="nav"><button class="ar" onclick="stepCol(-1)" aria-label="Назад">‹</button><div class="chips st">${ps.map((p,j)=>`<button class="chip ${p===tab?'on':''}" onclick="setTab(${p})">${P[p].e} ${P[p].n} · ${R.filter(r=>r.o[0]===p).length}</button>`).join('')}</div><button class="ar" onclick="stepCol(1)" aria-label="Вперёд">›</button></div>`;
+if(tab==='all'){h+=`<div class="cols">${ps.map(p=>`<section class="col" id="col${p}"><div class="colh" style="background:linear-gradient(135deg,${P[p].g})"><span>${P[p].e} ${P[p].n}</span><small>${R.filter(r=>r.o[0]===p).length}</small></div>${grp(p)}</section>`).join('')}</div>`}else h+=`<div id="lst">${grp(tab)}</div>`;
+return h+`<button class="btn" onclick="go('prof')">← Выбрать другую профессию</button><button class="btn alt" onclick="reset();render()">Начать заново</button><div style="height:14px"></div>`+demo}
+function extra(){if(S.v==='score'||S.v==='fav'||!S.fav.length)return '';return `<button class="fab" onclick="go('fav')">⚖️ Сравнение · ${S.fav.length}</button>`}
+function extraOld(){if(S.v==='score'||!S.fav.length){S.sheet=false;return ''}
+const s=`<button class="fab" onclick="S.sheet=true;render()">⚖️ Сравнение · ${S.fav.length}</button>`;if(!S.sheet)return s;
+const R=S.fav.map(i=>{const o=O[i],c=C[o[1]];return{i,n:c[0],pr:o[3]?0:o[4],sc:o[2],tm:tmin(c),q:c[4],b:o[3]}});
+const mn=k=>Math.min(...R.map(r=>r[k])),mx=Math.max(...R.map(r=>r.q)),cl=(r,k,v)=>r[k]===v?' class="b"':'';
+return s+`<div class="ov" onclick="S.sheet=false;render()"><div class="sh" onclick="event.stopPropagation()"><h2>Сравнение выбранных <button class="x" onclick="S.sheet=false;render()">✕</button></h2><table class="tb"><tr><th>Колледж</th><th>Цена/год</th><th>Балл*</th><th>В пути</th><th>Оценка</th><th></th></tr>${R.map(r=>`<tr><td>${r.n}</td><td${cl(r,'pr',mn('pr'))}>${r.b?'бесплатно':r.pr.toLocaleString('ru-RU')+' ₽'}</td><td${cl(r,'sc',mn('sc'))}>${f(r.sc)}</td><td${cl(r,'tm',mn('tm'))}>${r.tm} мин</td><td${cl(r,'q',mx)}>⭐ ${f(r.q)}</td><td><button class="x" onclick="del(${r.i})">✕</button></td></tr>`).join('')}</table><p class="hint" style="margin-top:10px">Зелёным отмечено лучшее: дешевле, легче по баллу, ближе от «${S.home}», выше оценка. Время в пути и оценки демо.</p></div></div>`}
+window.goCol=function(p){const e=document.getElementById('col'+p);if(e)e.parentElement.scrollTo({left:e.offsetLeft-(e.parentElement.clientWidth-e.offsetWidth)/2,behavior:'smooth'})}
+function wireCols(){const a0=document.querySelector('.chip.on');if(a0){const s=a0.parentElement;s.scrollLeft=a0.offsetLeft-s.clientWidth/2+a0.offsetWidth/2}const c=document.querySelector('.cols');if(!c)return;const upd=()=>{const mid=c.scrollLeft+c.clientWidth/2;let best=0,bd=1e9;[...c.children].forEach((e,i)=>{const d=Math.abs(e.offsetLeft+e.offsetWidth/2-mid);if(d<bd){bd=d;best=i}});const bs=document.querySelectorAll('.chip');bs.forEach((b,i)=>b.classList.toggle('on',i===best));const a=bs[best];if(a&&a.parentElement.scrollWidth>a.parentElement.clientWidth)a.parentElement.scrollTo({left:a.offsetLeft-20,behavior:'smooth'})};c.addEventListener('scroll',upd);upd()}
+window.stepCol=function(d){const bs=[...document.querySelectorAll('.chip')],i=bs.findIndex(b=>b.classList.contains('on')),t=bs[Math.max(0,Math.min(bs.length-1,i+d))];if(t&&t!==bs[i])t.click();};
+window.delCard=function(i,b){const c=b.closest('.cc');if(c.classList.contains('out'))return;S.fav=S.fav.filter(x=>x!==i);c.style.height=c.offsetHeight+'px';c.classList.add('out');setTimeout(()=>{c.classList.add('gone');if(document.querySelector('.cc.out:not(.gone)'))return;const sy=scrollY;S.na=1;render();scrollTo(0,sy)},400)};
+window.delCard0=function(i,b){const c=b.closest('.cc'),cl=document.querySelector('.cols'),sx=cl?cl.scrollLeft:0,sy=scrollY;c.style.height=c.offsetHeight+'px';c.classList.add('out');setTimeout(()=>{S.fav=S.fav.filter(x=>x!==i);S.na=1;render();const n=document.querySelector('.cols');if(n){n.style.scrollBehavior='auto';n.scrollLeft=sx}scrollTo(0,sy)},560)}
+$.classList.toggle('na',!!S.na);S.na=0;$.innerHTML=h+extra();wireCols();const t=document.querySelector('.card:not(.nx)');if(t)bind(t)}
+render();
+</script></body></html>
